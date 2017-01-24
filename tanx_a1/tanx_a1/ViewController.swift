@@ -5,6 +5,8 @@
 //  Created by Theodore Tan on 2017-01-23.
 //  Copyright © 2017 wlu. All rights reserved.
 //
+//  IMPORTANT: Developed on the school Macs!!!!
+//
 
 import UIKit
 
@@ -23,7 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    // function for changing images	
+    // function for changing images
     func changeImage(index: Int) {
         let image = UIImage(named: images[index]);
         imageView.image = image;
