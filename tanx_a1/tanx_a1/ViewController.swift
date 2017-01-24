@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    // function for changing images	
     func changeImage(index: Int) {
         let image = UIImage(named: images[index]);
         imageView.image = image;
