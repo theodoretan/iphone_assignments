@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     // init variables
-    let questions = ["Who is this?", "Which city is this place from?", "What brand is this?"];
-    let answers = ["Steve Jobs", "Toronto", "Apple"];
-    let images = ["steve-jobs.jpg", "toronto.jpg", "apple.png"];
+    let questions = ["Who am I?", "Which city am I from?", "What is my GitHub?"];
+    let answers = ["Theodore Tan", "Mississauga", "github.com/th30retical"];
+    let images = ["images/me.jpg", "images/mississauga.jpg", "images/github.jpg"];
     let defaultLabel = "???";
     var currentQA = 0;
     var displayed = false;
@@ -23,10 +23,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    func changeImage(index: Int) {
+        let image = UIImage(named: images[index]);
+        imageView.image = image;
+    }
+    
     @IBAction func showQuestion(sender: AnyObject) {
         // check if it's the first time displaying the question
         if (displayed) {
-            currentQA = (currentQA + 1) % 3;
+            currentQA = (currentQA + 1) % questions.count;
         } else {
             displayed = true;
         }
@@ -39,8 +44,7 @@ class ViewController: UIViewController {
         questionLabel.text = question;
         
         // set image
-        let image = UIImage(named: "images/" + images[currentQA]);
-        imageView.image = image;
+        changeImage(currentQA);
     }
     
     @IBAction func showAnswer(sender: AnyObject) {
@@ -56,8 +60,7 @@ class ViewController: UIViewController {
         questionLabel.text = defaultLabel;
         answerLabel.text = defaultLabel;
         displayed = false;
-        let image = UIImage(named: "images/" + images[currentQA]);
-        imageView.image = image;
+        changeImage(currentQA);
     }
     
     override func viewDidLoad() {
@@ -65,8 +68,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // set image to ui-image
-        let image = UIImage(named: "images/" + images[0]);
-        imageView.image = image;
+        changeImage(0);
     }
 
     override func didReceiveMemoryWarning() {
