@@ -17,53 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oXe-z1-5YO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oXe-z1-5YO">
                                 <rect key="frame" x="180" y="40" width="240" height="128"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="ej4-4f-lpx">
+                                        <variation key="heightClass=compact" constant="128"/>
+                                    </constraint>
                                     <constraint firstAttribute="width" constant="240" id="i5b-m7-5zg"/>
                                     <constraint firstAttribute="width" constant="240" id="jWg-cu-wTB"/>
                                     <constraint firstAttribute="height" constant="128" id="ptR-20-zcX"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="ej4-4f-lpx"/>
                                         <exclude reference="i5b-m7-5zg"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
+                                        <include reference="ej4-4f-lpx"/>
                                         <include reference="i5b-m7-5zg"/>
                                         <exclude reference="jWg-cu-wTB"/>
                                         <exclude reference="ptR-20-zcX"/>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sb-nO-BfK" userLabel="Question Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sb-nO-BfK" userLabel="Question Label">
                                 <rect key="frame" x="288" y="200" width="25" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dej-RJ-pPW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dej-RJ-pPW">
                                 <rect key="frame" x="254" y="318" width="93" height="30"/>
                                 <state key="normal" title="Show Answer"/>
                                 <connections>
                                     <action selector="answer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ceL-On-8MP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIH-fk-uAc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIH-fk-uAc">
                                 <rect key="frame" x="248" y="237" width="104" height="30"/>
                                 <state key="normal" title="Show Question"/>
                                 <connections>
                                     <action selector="question:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Vj-lY-nYR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBS-yj-s5X" userLabel="Answer Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBS-yj-s5X" userLabel="Answer Label">
                                 <rect key="frame" x="288" y="281" width="25" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aby-Bg-Gxe" userLabel="Query Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aby-Bg-Gxe" userLabel="Query Label">
                                 <rect key="frame" x="366" y="413" width="30" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Hj6-MC-Rhc"/>
@@ -84,7 +89,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Number of queries: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUZ-dy-wF0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of queries: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUZ-dy-wF0">
                                 <rect key="frame" x="180" y="413" width="152" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="152" id="Yiv-yK-xRS"/>
@@ -100,6 +105,26 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SIH-fk-uAc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Ib-d1-cqx"/>
+                            <constraint firstItem="oXe-z1-5YO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Sx-UZ-Dg0"/>
+                            <constraint firstItem="cUZ-dy-wF0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="393" id="8Of-9M-boF">
+                                <variation key="heightClass=compact" constant="340"/>
+                            </constraint>
+                            <constraint firstItem="aby-Bg-Gxe" firstAttribute="leading" secondItem="cUZ-dy-wF0" secondAttribute="trailing" constant="34" id="8ro-rp-gGl"/>
+                            <constraint firstItem="Dej-RJ-pPW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fkq-9C-TbD"/>
+                            <constraint firstItem="SIH-fk-uAc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="217" id="Q9J-qz-syv"/>
+                            <constraint firstItem="aby-Bg-Gxe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="393" id="RjH-rp-RNb">
+                                <variation key="heightClass=compact" constant="340"/>
+                            </constraint>
+                            <constraint firstItem="PBS-yj-s5X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="261" id="St7-LW-84n"/>
+                            <constraint firstItem="oXe-z1-5YO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="XCt-1f-0E9"/>
+                            <constraint firstItem="PBS-yj-s5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aKe-by-sRW"/>
+                            <constraint firstItem="5Sb-nO-BfK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cIe-gI-GZ5"/>
+                            <constraint firstItem="Dej-RJ-pPW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="298" id="fAa-5g-BPz"/>
+                            <constraint firstItem="cUZ-dy-wF0" firstAttribute="leading" secondItem="oXe-z1-5YO" secondAttribute="leading" id="vDh-Wt-RDs"/>
+                            <constraint firstItem="5Sb-nO-BfK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="wZy-7c-Pkl"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="PBS-yj-s5X" id="7fZ-Tb-3R3"/>
