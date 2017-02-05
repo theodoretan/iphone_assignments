@@ -15,6 +15,7 @@
 		AC9B585B1E45254F00253A2A /* tanx_a2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B585A1E45254F00253A2A /* tanx_a2Tests.swift */; };
 		AC9B58661E45254F00253A2A /* tanx_a2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B58651E45254F00253A2A /* tanx_a2UITests.swift */; };
 		AC9B58741E45260400253A2A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B58731E45260400253A2A /* Card.swift */; };
+		ACAA13891E47CD560098A54D /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA13881E47CD560098A54D /* Query.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AC9B58651E45254F00253A2A /* tanx_a2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tanx_a2UITests.swift; sourceTree = "<group>"; };
 		AC9B58671E45254F00253A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC9B58731E45260400253A2A /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		ACAA13881E47CD560098A54D /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				AC9B58451E45254F00253A2A /* AppDelegate.swift */,
 				AC9B58471E45254F00253A2A /* ViewController.swift */,
 				AC9B58491E45254F00253A2A /* Main.storyboard */,
+				ACAA13881E47CD560098A54D /* Query.swift */,
 				AC9B58731E45260400253A2A /* Card.swift */,
 				AC9B584C1E45254F00253A2A /* Assets.xcassets */,
 				AC9B584E1E45254F00253A2A /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAA13891E47CD560098A54D /* Query.swift in Sources */,
 				AC9B58481E45254F00253A2A /* ViewController.swift in Sources */,
 				AC9B58741E45260400253A2A /* Card.swift in Sources */,
 				AC9B58461E45254F00253A2A /* AppDelegate.swift in Sources */,
@@ -488,6 +492,7 @@
 				AC9B586C1E45254F00253A2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC9B586D1E45254F00253A2A /* Build configuration list for PBXNativeTarget "tanx_a2Tests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				AC9B586F1E45254F00253A2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC9B58701E45254F00253A2A /* Build configuration list for PBXNativeTarget "tanx_a2UITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				AC9B58721E45254F00253A2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -20,9 +20,9 @@ struct Deck {
     init() {
         let questions = ["Who am I?", "Which city am I from?", "What is my GitHub?"];
         let answers = ["Theodore Tan", "Mississauga", "github.com/th30retical"];
-        
+        let images = ["me.png", "mississauga.png", "github.png"];
         for (var i = 0; i < questions.count; i+=1) {
-            let card = Card(image: "", question: questions[i], answer: answers[i]);
+            let card = Card(image: images[i], question: questions[i], answer: answers[i]);
             Deck.deck.append(card);
         }
     }
@@ -37,5 +37,9 @@ struct Deck {
     
     static func getCard() -> Int {
         return current;
+    }
+    
+    static func length() -> Int {
+        return deck.count;
     }
 }
