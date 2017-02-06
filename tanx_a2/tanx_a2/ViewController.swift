@@ -25,12 +25,16 @@ class ViewController: UIViewController {
         _ = Deck();
         _ = Query();
         
-//        let userDefaults = NSUserDefaults.standardUserDefaults();
-////        let defaults = UserDefaults.standard;
-//        if let i = userDefaults.integer(forKey: "currentIndex") as Int? {
-//            print("viewDidLoad, current index is \(i)");
-//            deck.setCard(i);
-//        }
+        let defaults = NSUserDefaults.standardUserDefaults();
+        if let i = defaults.integerForKey("currentIndex") as Int? {
+            print("viewDidLoad, current index is \(i)");
+            Deck.setCard(i);
+        }
+        
+        if let j = defaults.integerForKey("query") as Int? {
+            Query.setCount(j);
+            queryLabel.text = String(j);
+        }
         
         changeImage();
     }

@@ -16,6 +16,7 @@
 		AC9B58661E45254F00253A2A /* tanx_a2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B58651E45254F00253A2A /* tanx_a2UITests.swift */; };
 		AC9B58741E45260400253A2A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B58731E45260400253A2A /* Card.swift */; };
 		ACAA13891E47CD560098A54D /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA13881E47CD560098A54D /* Query.swift */; };
+		ACAA138B1E4827040098A54D /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA138A1E4827040098A54D /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AC9B58671E45254F00253A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC9B58731E45260400253A2A /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		ACAA13881E47CD560098A54D /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		ACAA138A1E4827040098A54D /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				AC9B58491E45254F00253A2A /* Main.storyboard */,
 				ACAA13881E47CD560098A54D /* Query.swift */,
 				AC9B58731E45260400253A2A /* Card.swift */,
+				ACAA138A1E4827040098A54D /* Deck.swift */,
 				AC9B584C1E45254F00253A2A /* Assets.xcassets */,
 				AC9B584E1E45254F00253A2A /* LaunchScreen.storyboard */,
 				AC9B58511E45254F00253A2A /* Info.plist */,
@@ -264,6 +267,7 @@
 			files = (
 				ACAA13891E47CD560098A54D /* Query.swift in Sources */,
 				AC9B58481E45254F00253A2A /* ViewController.swift in Sources */,
+				ACAA138B1E4827040098A54D /* Deck.swift in Sources */,
 				AC9B58741E45260400253A2A /* Card.swift in Sources */,
 				AC9B58461E45254F00253A2A /* AppDelegate.swift in Sources */,
 			);
