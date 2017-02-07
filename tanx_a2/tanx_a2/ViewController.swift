@@ -13,6 +13,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // get variables from storyboard
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
@@ -22,29 +23,36 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // initiate deck and query
         _ = Deck();
         _ = Query();
         
+        // if the user has used the app before, get where they left off
         let defaults = NSUserDefaults.standardUserDefaults();
         if let i = defaults.integerForKey("currentIndex") as Int? {
             print("viewDidLoad, current index is \(i)");
             Deck.setCard(i);
         }
         
+        // if the user has used the app before, get the number of times
+        // they pressed show answer
         if let j = defaults.integerForKey("query") as Int? {
             Query.setCount(j);
             queryLabel.text = String(j);
         }
         
+        // change the image programatically
         changeImage();
     }
     
     func changeImage() {
+        // gets the current image and sets it in the image view
         let image = UIImage(named: Deck.card().image);
         imageView.image = image;
     }
 
     @IBAction func question(sender: UIButton) {
+        // displays the next question and removes the old answer
         if (questionLabel.text != "???") {
             let currentQA = (Deck.getCard() + 1) % Deck.length();
             Deck.setCard(currentQA);
@@ -57,6 +65,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func answer(sender: UIButton) {
+        // only show the answer if there's a question
+        // and add one to the query count if they pressed it to show the answer
         if (questionLabel.text != "???" && answerLabel.text == "???") {
             let answer = Deck.card().answer;
             answerLabel.text = answer;

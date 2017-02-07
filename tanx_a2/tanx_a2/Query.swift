@@ -9,10 +9,11 @@
 import UIKit
 
 struct Query {
-    static var count = 0;
+    // store the number of queries done throughout the app's lifetime
+    private static var count = 0;
     
     init() {
-        
+        // don't have to initiate anything here
     }
     
     static func setCount(c: Int) {

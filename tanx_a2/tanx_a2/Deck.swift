@@ -9,10 +9,11 @@
 import Foundation
 
 struct Deck {
-    static var deck = [Card](); // a deck is an array of cards
-    static var current:Int = 0; // the current card on the deck
+    private static var deck = [Card](); // a deck is an array of cards
+    private static var current:Int = 0; // the current card on the deck
     
     init() {
+        // create the deck of cards
         let questions = ["Who am I?", "Which city am I from?", "What is my GitHub?"];
         let answers = ["Theodore Tan", "Mississauga", "github.com/th30retical"];
         let images = ["me.png", "mississauga.png", "github.png"];
@@ -22,18 +23,22 @@ struct Deck {
         }
     }
     
+    // gets the card from the deck
     static func card() -> Card {
         return deck[current];
     }
-    
+
+    // sets the new index of the deck
     static func setCard(index: Int) {
         current = index;
     }
     
+    // gets the current index of the deck
     static func getCard() -> Int {
         return current;
     }
     
+    // gets the length of the deck
     static func length() -> Int {
         return deck.count;
     }

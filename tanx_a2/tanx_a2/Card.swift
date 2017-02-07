@@ -7,6 +7,9 @@
 
 import Foundation
 
+// Cart stucture for storing each screens data
+// without global variables
+
 struct Card {
     let image:String;
     let question:String;
