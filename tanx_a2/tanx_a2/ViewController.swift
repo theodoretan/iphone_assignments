@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         if let i = defaults.integerForKey("currentIndex") as Int? {
             print("viewDidLoad, current index is \(i)");
             Deck.setCard(i);
-            questionLabel.text = Deck.card().question;
         }
         
         // if the user has used the app before, get the number of times
@@ -40,6 +39,9 @@ class ViewController: UIViewController {
         if let j = defaults.integerForKey("query") as Int? {
             Query.setCount(j);
             queryLabel.text = String(j);
+            if (j != 0) {
+                questionLabel.text = Deck.card().question;
+            }
         }
         
         // change the image programatically
