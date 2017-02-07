@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         if let i = defaults.integerForKey("currentIndex") as Int? {
             print("viewDidLoad, current index is \(i)");
             Deck.setCard(i);
+            questionLabel.text = Deck.card().question;
         }
         
         // if the user has used the app before, get the number of times
