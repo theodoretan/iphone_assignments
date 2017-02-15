@@ -73,5 +73,6 @@ class Deck : NSObject, NSCoding, NSCopying {
     
     func clearDeck() {
         deck.removeAll();
+        current = 0;
     }
 }

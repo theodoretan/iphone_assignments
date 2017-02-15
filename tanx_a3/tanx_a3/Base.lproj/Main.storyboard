@@ -72,20 +72,46 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="N2h-jF-BdP" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="40" id="0Gn-ts-2Jp"/>
-                            <constraint firstItem="xtf-ib-MZ1" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="62" id="74D-W0-oaV"/>
-                            <constraint firstItem="3Xc-U2-qtN" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="36" id="9or-Uf-Lbb"/>
-                            <constraint firstItem="KcS-MX-tvE" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="471" id="Ba3-sO-7kD"/>
-                            <constraint firstItem="N2h-jF-BdP" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="-156" id="Hvd-Sp-EU9"/>
+                            <constraint firstItem="N2h-jF-BdP" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="40" id="0Gn-ts-2Jp">
+                                <variation key="heightClass=compact" constant="12"/>
+                            </constraint>
+                            <constraint firstItem="xtf-ib-MZ1" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="62" id="74D-W0-oaV">
+                                <variation key="heightClass=compact" constant="57"/>
+                            </constraint>
+                            <constraint firstItem="3Xc-U2-qtN" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="36" id="9or-Uf-Lbb">
+                                <variation key="heightClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="KcS-MX-tvE" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="471" id="Ba3-sO-7kD">
+                                <variation key="heightClass=compact" constant="284"/>
+                            </constraint>
+                            <constraint firstItem="N2h-jF-BdP" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="-156" id="Hvd-Sp-EU9">
+                                <variation key="heightClass=compact" constant="-160"/>
+                            </constraint>
                             <constraint firstItem="k2r-ei-0cE" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" id="I0d-M5-jCX"/>
-                            <constraint firstItem="YQC-cw-ua2" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" id="RmU-LK-ZiC"/>
-                            <constraint firstItem="N33-6w-cqK" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="105" id="Tus-tf-ALw"/>
-                            <constraint firstItem="xtf-ib-MZ1" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="101" id="Wly-xA-UIM"/>
-                            <constraint firstItem="YQC-cw-ua2" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="414" id="bic-KU-6Yh"/>
-                            <constraint firstItem="3Xc-U2-qtN" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="61.5" id="kHb-Cl-oPY"/>
-                            <constraint firstItem="N33-6w-cqK" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="-150" id="mlN-7s-GfG"/>
-                            <constraint firstItem="KcS-MX-tvE" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" id="sct-D6-wfL"/>
-                            <constraint firstItem="k2r-ei-0cE" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="165" id="stU-gy-TW3"/>
+                            <constraint firstItem="YQC-cw-ua2" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" id="RmU-LK-ZiC">
+                                <variation key="heightClass=compact" constant="-57.5"/>
+                            </constraint>
+                            <constraint firstItem="N33-6w-cqK" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="105" id="Tus-tf-ALw">
+                                <variation key="heightClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="xtf-ib-MZ1" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="101" id="Wly-xA-UIM">
+                                <variation key="heightClass=compact" constant="46"/>
+                            </constraint>
+                            <constraint firstItem="YQC-cw-ua2" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="414" id="bic-KU-6Yh">
+                                <variation key="heightClass=compact" constant="284"/>
+                            </constraint>
+                            <constraint firstItem="3Xc-U2-qtN" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="61.5" id="kHb-Cl-oPY">
+                                <variation key="heightClass=compact" constant="57.5"/>
+                            </constraint>
+                            <constraint firstItem="N33-6w-cqK" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="-150" id="mlN-7s-GfG">
+                                <variation key="heightClass=compact" constant="-155"/>
+                            </constraint>
+                            <constraint firstItem="KcS-MX-tvE" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" id="sct-D6-wfL">
+                                <variation key="heightClass=compact" constant="53.5"/>
+                            </constraint>
+                            <constraint firstItem="k2r-ei-0cE" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="165" id="stU-gy-TW3">
+                                <variation key="heightClass=compact" constant="84"/>
+                            </constraint>
                         </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="QAk-qw-yz6" eventType="touchDown" id="gLA-Gf-Hv1"/>
@@ -147,19 +173,19 @@
                                     <action selector="showAnswer:" destination="zcW-zD-LgW" eventType="touchUpInside" id="h8u-Jv-Ghw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-4R-m7k" userLabel="CardsLabel">
-                                <rect key="frame" x="233" y="449" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT8-WD-WLP" userLabel="CardsCount">
+                                <rect key="frame" x="353" y="449" width="50" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="UjG-MK-jkK"/>
+                                    <constraint firstAttribute="width" constant="50" id="Y0X-UT-FlJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT8-WD-WLP" userLabel="CardsCount">
-                                <rect key="frame" x="353" y="449" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-4R-m7k" userLabel="CardsLabel">
+                                <rect key="frame" x="233" y="449" width="50" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Y0X-UT-FlJ"/>
+                                    <constraint firstAttribute="width" constant="50" id="UjG-MK-jkK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -170,22 +196,42 @@
                         <constraints>
                             <constraint firstItem="CMZ-NI-bmu" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" id="7j0-6k-Fjg"/>
                             <constraint firstItem="uVA-QJ-Ths" firstAttribute="top" secondItem="9fp-WD-mQB" secondAttribute="bottom" constant="8" id="7vc-1c-jIA"/>
-                            <constraint firstItem="uVA-QJ-Ths" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="298" id="9Mf-EB-R73"/>
+                            <constraint firstItem="uVA-QJ-Ths" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="298" id="9Mf-EB-R73">
+                                <variation key="heightClass=compact" constant="249"/>
+                            </constraint>
                             <constraint firstItem="uVA-QJ-Ths" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" id="DLo-GE-24I"/>
-                            <constraint firstItem="LT8-WD-WLP" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" constant="77.5" id="H5z-nx-UAP"/>
+                            <constraint firstItem="LT8-WD-WLP" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" constant="77.5" id="H5z-nx-UAP">
+                                <variation key="heightClass=compact" constant="63"/>
+                            </constraint>
                             <constraint firstItem="0Se-Km-CPX" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="17" id="KAl-WE-CbI"/>
-                            <constraint firstItem="hWR-pH-O7t" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="208" id="NUt-9C-jc4"/>
+                            <constraint firstItem="hWR-pH-O7t" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="208" id="NUt-9C-jc4">
+                                <variation key="heightClass=compact" constant="182"/>
+                            </constraint>
                             <constraint firstItem="hWR-pH-O7t" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" id="Zc3-oW-5WV"/>
-                            <constraint firstItem="CMZ-NI-bmu" firstAttribute="top" secondItem="0Se-Km-CPX" secondAttribute="bottom" constant="34" id="Zoz-T0-wF7"/>
-                            <constraint firstItem="LT8-WD-WLP" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="429" id="aJX-mY-puo"/>
-                            <constraint firstItem="eVJ-4R-m7k" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" constant="-42" id="al6-zF-WrC"/>
+                            <constraint firstItem="CMZ-NI-bmu" firstAttribute="top" secondItem="0Se-Km-CPX" secondAttribute="bottom" constant="34" id="Zoz-T0-wF7">
+                                <variation key="heightClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="LT8-WD-WLP" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="429" id="aJX-mY-puo">
+                                <variation key="heightClass=compact" constant="287"/>
+                            </constraint>
+                            <constraint firstItem="eVJ-4R-m7k" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" constant="-42" id="al6-zF-WrC">
+                                <variation key="heightClass=compact" constant="-35"/>
+                            </constraint>
                             <constraint firstItem="9fp-WD-mQB" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" id="ayl-Rc-mTf"/>
-                            <constraint firstItem="eVJ-4R-m7k" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="429" id="cTB-gM-PKU"/>
-                            <constraint firstItem="CMZ-NI-bmu" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="179" id="fe4-rQ-DDi"/>
+                            <constraint firstItem="eVJ-4R-m7k" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="429" id="cTB-gM-PKU">
+                                <variation key="heightClass=compact" constant="287"/>
+                            </constraint>
+                            <constraint firstItem="CMZ-NI-bmu" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="179" id="fe4-rQ-DDi">
+                                <variation key="heightClass=compact" constant="153"/>
+                            </constraint>
                             <constraint firstItem="0Se-Km-CPX" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" id="h4K-rh-Ijt"/>
-                            <constraint firstItem="9fp-WD-mQB" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="269" id="h7j-Wk-JU5"/>
+                            <constraint firstItem="9fp-WD-mQB" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="269" id="h7j-Wk-JU5">
+                                <variation key="heightClass=compact" constant="220"/>
+                            </constraint>
                             <constraint firstItem="hWR-pH-O7t" firstAttribute="top" secondItem="CMZ-NI-bmu" secondAttribute="bottom" constant="8" id="pXW-dd-kUd"/>
-                            <constraint firstItem="9fp-WD-mQB" firstAttribute="top" secondItem="hWR-pH-O7t" secondAttribute="bottom" constant="31" id="uUl-ar-DxI"/>
+                            <constraint firstItem="9fp-WD-mQB" firstAttribute="top" secondItem="hWR-pH-O7t" secondAttribute="bottom" constant="31" id="uUl-ar-DxI">
+                                <variation key="heightClass=compact" constant="8"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Card" image="cards" id="0FZ-hB-Jg9"/>
