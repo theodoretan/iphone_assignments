@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xCX-BJ-SiZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Input-->
+        <scene sceneID="9fv-zW-fRe">
+            <objects>
+                <viewController id="QAk-qw-yz6" customClass="InputViewController" customModule="tanx_a3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="25O-PV-8OK"/>
+                        <viewControllerLayoutGuide type="bottom" id="uOQ-d3-cvR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0TR-mu-yU1" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-jF-BdP">
+                                <rect key="frame" x="107" y="60" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-U2-qtN" userLabel="QuestionTextField">
+                                <rect key="frame" x="223" y="56" width="277" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="Ugq-af-UYq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="QAk-qw-yz6" eventType="editingDidEnd" id="VqF-WW-ENF"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtf-ib-MZ1" userLabel="AnswerTextField">
+                                <rect key="frame" x="223" y="121" width="278" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="68Q-8W-eQD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="QAk-qw-yz6" eventType="editingDidEnd" id="dFs-bK-hm0"/>
+                                </connections>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2r-ei-0cE">
+                                <rect key="frame" x="140" y="185" width="320" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N33-6w-cqK">
+                                <rect key="frame" x="119" y="125" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQC-cw-ua2">
+                                <rect key="frame" x="268" y="434" width="65" height="30"/>
+                                <state key="normal" title="Add Card"/>
+                                <connections>
+                                    <action selector="addCard:" destination="QAk-qw-yz6" eventType="touchUpInside" id="jxO-X6-Z6M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcS-MX-tvE">
+                                <rect key="frame" x="263" y="491" width="75" height="30"/>
+                                <state key="normal" title="Clear Deck"/>
+                                <connections>
+                                    <action selector="clearDeck:" destination="QAk-qw-yz6" eventType="touchUpInside" id="FFS-w8-eKe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N2h-jF-BdP" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="40" id="0Gn-ts-2Jp"/>
+                            <constraint firstItem="xtf-ib-MZ1" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="62" id="74D-W0-oaV"/>
+                            <constraint firstItem="3Xc-U2-qtN" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="36" id="9or-Uf-Lbb"/>
+                            <constraint firstItem="KcS-MX-tvE" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="471" id="Ba3-sO-7kD"/>
+                            <constraint firstItem="N2h-jF-BdP" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="-156" id="Hvd-Sp-EU9"/>
+                            <constraint firstItem="k2r-ei-0cE" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" id="I0d-M5-jCX"/>
+                            <constraint firstItem="YQC-cw-ua2" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" id="RmU-LK-ZiC"/>
+                            <constraint firstItem="N33-6w-cqK" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="105" id="Tus-tf-ALw"/>
+                            <constraint firstItem="xtf-ib-MZ1" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="101" id="Wly-xA-UIM"/>
+                            <constraint firstItem="YQC-cw-ua2" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="414" id="bic-KU-6Yh"/>
+                            <constraint firstItem="3Xc-U2-qtN" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="61.5" id="kHb-Cl-oPY"/>
+                            <constraint firstItem="N33-6w-cqK" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" constant="-150" id="mlN-7s-GfG"/>
+                            <constraint firstItem="KcS-MX-tvE" firstAttribute="centerX" secondItem="0TR-mu-yU1" secondAttribute="centerX" id="sct-D6-wfL"/>
+                            <constraint firstItem="k2r-ei-0cE" firstAttribute="top" secondItem="25O-PV-8OK" secondAttribute="bottom" constant="165" id="stU-gy-TW3"/>
+                        </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="QAk-qw-yz6" eventType="touchDown" id="gLA-Gf-Hv1"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Input" image="input" id="pBe-t4-Wv0"/>
+                    <connections>
+                        <outlet property="answerField" destination="xtf-ib-MZ1" id="PJe-22-sS8"/>
+                        <outlet property="pickerView" destination="k2r-ei-0cE" id="KVn-XO-Gcs"/>
+                        <outlet property="questionField" destination="3Xc-U2-qtN" id="FGU-rA-rJw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZH-qg-Hbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="827"/>
+        </scene>
+        <!--Card-->
+        <scene sceneID="JRB-TU-CWa">
+            <objects>
+                <viewController id="zcW-zD-LgW" customClass="CardViewController" customModule="tanx_a3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ioT-QO-NSu"/>
+                        <viewControllerLayoutGuide type="bottom" id="pPQ-vk-Xsh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LJ5-84-OWx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Se-Km-CPX">
+                                <rect key="frame" x="180" y="37" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0Se-Km-CPX" secondAttribute="height" multiplier="15:8" id="Lgx-Ap-91W"/>
+                                    <constraint firstAttribute="height" constant="128" id="uzr-8u-w7p"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMZ-NI-bmu" userLabel="QuestionLabel">
+                                <rect key="frame" x="288" y="199" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWR-pH-O7t">
+                                <rect key="frame" x="248" y="228" width="104" height="30"/>
+                                <state key="normal" title="Show Question"/>
+                                <connections>
+                                    <action selector="showQuestion:" destination="zcW-zD-LgW" eventType="touchUpInside" id="mFb-Lh-jZE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fp-WD-mQB" userLabel="AnswerLabel">
+                                <rect key="frame" x="288" y="289" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVA-QJ-Ths">
+                                <rect key="frame" x="254" y="318" width="93" height="30"/>
+                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="zcW-zD-LgW" eventType="touchUpInside" id="h8u-Jv-Ghw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-4R-m7k" userLabel="CardsLabel">
+                                <rect key="frame" x="233" y="449" width="50" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="UjG-MK-jkK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT8-WD-WLP" userLabel="CardsCount">
+                                <rect key="frame" x="353" y="449" width="50" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Y0X-UT-FlJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CMZ-NI-bmu" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" id="7j0-6k-Fjg"/>
+                            <constraint firstItem="uVA-QJ-Ths" firstAttribute="top" secondItem="9fp-WD-mQB" secondAttribute="bottom" constant="8" id="7vc-1c-jIA"/>
+                            <constraint firstItem="uVA-QJ-Ths" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="298" id="9Mf-EB-R73"/>
+                            <constraint firstItem="uVA-QJ-Ths" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" id="DLo-GE-24I"/>
+                            <constraint firstItem="LT8-WD-WLP" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" constant="77.5" id="H5z-nx-UAP"/>
+                            <constraint firstItem="0Se-Km-CPX" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="17" id="KAl-WE-CbI"/>
+                            <constraint firstItem="hWR-pH-O7t" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="208" id="NUt-9C-jc4"/>
+                            <constraint firstItem="hWR-pH-O7t" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" id="Zc3-oW-5WV"/>
+                            <constraint firstItem="CMZ-NI-bmu" firstAttribute="top" secondItem="0Se-Km-CPX" secondAttribute="bottom" constant="34" id="Zoz-T0-wF7"/>
+                            <constraint firstItem="LT8-WD-WLP" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="429" id="aJX-mY-puo"/>
+                            <constraint firstItem="eVJ-4R-m7k" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" constant="-42" id="al6-zF-WrC"/>
+                            <constraint firstItem="9fp-WD-mQB" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" id="ayl-Rc-mTf"/>
+                            <constraint firstItem="eVJ-4R-m7k" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="429" id="cTB-gM-PKU"/>
+                            <constraint firstItem="CMZ-NI-bmu" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="179" id="fe4-rQ-DDi"/>
+                            <constraint firstItem="0Se-Km-CPX" firstAttribute="centerX" secondItem="LJ5-84-OWx" secondAttribute="centerX" id="h4K-rh-Ijt"/>
+                            <constraint firstItem="9fp-WD-mQB" firstAttribute="top" secondItem="ioT-QO-NSu" secondAttribute="bottom" constant="269" id="h7j-Wk-JU5"/>
+                            <constraint firstItem="hWR-pH-O7t" firstAttribute="top" secondItem="CMZ-NI-bmu" secondAttribute="bottom" constant="8" id="pXW-dd-kUd"/>
+                            <constraint firstItem="9fp-WD-mQB" firstAttribute="top" secondItem="hWR-pH-O7t" secondAttribute="bottom" constant="31" id="uUl-ar-DxI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Card" image="cards" id="0FZ-hB-Jg9"/>
+                    <connections>
+                        <outlet property="answerText" destination="9fp-WD-mQB" id="cRE-E6-nf3"/>
+                        <outlet property="cardLabel" destination="LT8-WD-WLP" id="CJE-Wx-VmB"/>
+                        <outlet property="imageView" destination="0Se-Km-CPX" id="8qf-cd-lQa"/>
+                        <outlet property="questionText" destination="CMZ-NI-bmu" id="e4p-73-r2w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFH-Zx-Hde" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="-1"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kpI-5u-2WG">
+            <objects>
+                <tabBarController id="xCX-BJ-SiZ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ZVg-d0-17K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zcW-zD-LgW" kind="relationship" relationship="viewControllers" id="STS-FG-6T3"/>
+                        <segue destination="QAk-qw-yz6" kind="relationship" relationship="viewControllers" id="2jP-rv-yw1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZk-p3-oG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-160" y="329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cards" width="30" height="30"/>
+        <image name="input" width="30" height="30"/>
+    </resources>
+</document>
