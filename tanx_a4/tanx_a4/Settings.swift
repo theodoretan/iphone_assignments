@@ -17,11 +17,6 @@ class Settings {
     static let deckKey = "deckKey";
     static let indexKey = "indexKey";
     
-    static let images = ["mississauga", "raptors", "bluejays", "leafs", "coffee", "flash"];
-    
-    static let defaultPicture = "defaultimage";
-    static let defaultQuestion = "Please add a question using the Input Tab";
-    static let defaultAnswer = "???";
     
     static let alertTitle = "Clear Deck";
     static let alertMessage = "The deck was erased";
@@ -29,7 +24,14 @@ class Settings {
     
     static let cardAlertTitle = "Information";
     static let cardAlertMessage = "Please fill out all the fields";
+    static let cardSaveMessage = "Saved Card";
     
     static let actionCancel = "Cancel";
     static let destroyMessage = "The entire deck will be erased, are you sure?";
+    
+    static let cellID = "cell";
+    static let segueIDShow = "ShowDetail";
+    static let segueIDAdd = "AddCard";
+    
+    static let empty = "";
 }

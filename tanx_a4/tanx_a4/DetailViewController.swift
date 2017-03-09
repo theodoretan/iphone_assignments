@@ -11,14 +11,18 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var answerField: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
-    var data = "";
+    var card:Card?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        answerField.text = self.data;
+        
+        // set view
+        answerField.text = card!.getAnswer();
+        self.title = card?.getQuestion();
+        imageView.image = card?.getImage();
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,9 +31,8 @@ class DetailViewController: UIViewController {
     }
     
     
-    
-    
-    func initWithData(data: String) {
-        self.data = data;
+    func initWithData(data: Card) {
+        // load card
+        self.card = data;
     }
 }

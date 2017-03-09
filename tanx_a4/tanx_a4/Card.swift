@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class Card : NSObject, NSCoding, NSCopying {
-    private var image:String = "";
+    private var image:UIImage? = nil;
     private var question:String = "";
     private var answer:String = "";
     
-    init(image:String, question:String, answer:String) {
+    init(image:UIImage, question:String, answer:String) {
         self.image = image;
         self.question = question;
         self.answer = answer;
@@ -24,7 +25,7 @@ class Card : NSObject, NSCoding, NSCopying {
     }
     
     required init?(coder decoder: NSCoder) {
-        image = decoder.decodeObject(forKey: Settings.imageKey) as! String;
+        image = decoder.decodeObject(forKey: Settings.imageKey) as? UIImage;
         question = decoder.decodeObject(forKey: Settings.questionKey) as! String;
         answer = decoder.decodeObject(forKey: Settings.answerKey) as! String;
     }
@@ -47,8 +48,8 @@ class Card : NSObject, NSCoding, NSCopying {
         return question;
     }
     
-    func getImage() -> String {
-        return image;
+    func getImage() -> UIImage {
+        return image!;
     }
     
     func getAnswer() -> String {

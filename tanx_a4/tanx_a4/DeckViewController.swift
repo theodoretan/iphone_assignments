@@ -11,11 +11,9 @@ import UIKit
 
 class DeckViewController: UITableViewController {
     
-    let list = ["hello", "world"];
-    
-    let cellIdentifier = "cell";
-    let segueIdentifierShow = "ShowDetail";
-    let segueIdAdd = "AddCard";
+    let cellIdentifier = Settings.cellID;
+    let segueIdentifierShow = Settings.segueIDShow;
+    let segueIdAdd = Settings.segueIDAdd;
     
     var deck : Deck!;
     
@@ -26,15 +24,17 @@ class DeckViewController: UITableViewController {
         SharingDeck.sharedDeck.loadDeck();
         
         deck = SharingDeck.sharedDeck.deck;
-        
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // show updated table
+        tableView.reloadData();
     }
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
     }
-    
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,10 +45,20 @@ class DeckViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath);
         
         let card = deck.getCard(index: indexPath.row);
+        cell.imageView?.image = card.getImage();
         cell.textLabel?.text = card.getQuestion();
         
         return cell;
     }
+    
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deck.removeCard(index: indexPath.row);
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
@@ -62,8 +72,7 @@ class DeckViewController: UITableViewController {
             
             let card = deck.getCard(index: (indexPath?.row)!);
             
-            detailVC.initWithData(data: String(card.getQuestion()));
-        } else if (segue.identifier == segueIdAdd) {
+            detailVC.initWithData(data: card);
             
         }
     }

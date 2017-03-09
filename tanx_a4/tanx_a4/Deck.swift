@@ -7,9 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
 class Deck : NSObject, NSCoding, NSCopying {
-    private let defaultCard = Card(image: Settings.defaultPicture, question: Settings.defaultQuestion, answer: Settings.defaultAnswer);
     private var deck = [Card]();
     private var current:Int = 0;
     
@@ -36,32 +36,23 @@ class Deck : NSObject, NSCoding, NSCopying {
     
     // other functions
     func getCurrentCard() -> Card {
-        var card = defaultCard;
-        if (deck.count != 0) {
-            card = deck[current];
-        }
+        let card = deck[current];
         return card;
     }
     
     
-    func getNextCard() -> Card {
-        var card = defaultCard;
+    func getNextCard() -> Card? {
         if (deck.count != 0) {
             current = (current + 1) % deck.count;
-            card = deck[current];
+            let card = deck[current];
+            return card;
         }
-        return card;
-        
+        return nil;
     }
     
     
     func getCard(index: Int) -> Card {
-        var card = defaultCard;
-        
-        if (index < deck.count) {
-            card = deck[index];
-        }
-        
+        let card = deck[index];
         return card;
     }
     
@@ -78,7 +69,7 @@ class Deck : NSObject, NSCoding, NSCopying {
         return current;
     }
     
-    func addCardToDeck(image: String, question: String, answer: String) {
+    func addCardToDeck(image: UIImage, question: String, answer: String) {
         let card = Card(image: image, question: question, answer: answer);
         deck.append(card);
     }
@@ -91,4 +82,10 @@ class Deck : NSObject, NSCoding, NSCopying {
         deck.removeAll();
         current = 0;
     }
+    
+    
+    func removeCard(index: Int) {
+        deck.remove(at: index);
+    }
+    
 }
