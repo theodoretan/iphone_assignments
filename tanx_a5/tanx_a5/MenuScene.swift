@@ -13,6 +13,7 @@ import GameplayKit
 class MenuScene: SKScene {
     override func didMove(to view: SKView) {
         // define labels
+        // use SKLabelNode
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

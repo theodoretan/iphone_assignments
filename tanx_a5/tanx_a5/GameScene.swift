@@ -10,8 +10,8 @@
 // menu
 // explosion on collision
 // end game on 0 lives
+// win game on 3 kills
 // music
-// labels for lives/score
 
 
 import SpriteKit
@@ -116,7 +116,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let removeHealth = SKAction.run {
             self.lives -= 1;
             print(self.lives);
-        }
+        };
         
         let invaderAction = SKAction.sequence([
             SKAction.moveTo(y: -self.size.height/2, duration: 3.0),
