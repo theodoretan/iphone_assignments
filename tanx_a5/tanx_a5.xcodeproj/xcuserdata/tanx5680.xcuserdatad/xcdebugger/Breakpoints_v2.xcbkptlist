@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tanx_a5/MenuScene.swift"
+            timestampString = "511316986.03904"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "MenuScene"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tanx_a5/GameScene.swift"
+            timestampString = "511321767.979149"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "GameScene"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tanx_a5.GameScene.__deallocating_deinit"
+                  moduleName = "tanx_a5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanx5680/Desktop/tanx_a5/tanx_a5/GameScene.swift"
+                  timestampString = "511321767.987111"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tanx_a5.GameScene.init (size : __C.CGSize) -&gt; tanx_a5.GameScene"
+                  moduleName = "tanx_a5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanx5680/Desktop/tanx_a5/tanx_a5/GameScene.swift"
+                  timestampString = "511321767.992653"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tanx_a5.GameScene.__allocating_init (size : __C.CGSize) -&gt; tanx_a5.GameScene"
+                  moduleName = "tanx_a5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanx5680/Desktop/tanx_a5/tanx_a5/GameScene.swift"
+                  timestampString = "511321767.996677"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tanx_a5.GameScene.init () -&gt; tanx_a5.GameScene"
+                  moduleName = "tanx_a5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanx5680/Desktop/tanx_a5/tanx_a5/GameScene.swift"
+                  timestampString = "511321767.999337"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tanx_a5.GameScene.__allocating_init () -&gt; tanx_a5.GameScene"
+                  moduleName = "tanx_a5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanx5680/Desktop/tanx_a5/tanx_a5/GameScene.swift"
+                  timestampString = "511321768.0007"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tanx_a5.GameScene.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;tanx_a5.GameScene&gt;"
+                  moduleName = "tanx_a5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanx5680/Desktop/tanx_a5/tanx_a5/GameScene.swift"
+                  timestampString = "511321768.002006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tanx_a5.GameScene.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;tanx_a5.GameScene&gt;"
+                  moduleName = "tanx_a5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanx5680/Desktop/tanx_a5/tanx_a5/GameScene.swift"
+                  timestampString = "511321768.003352"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
