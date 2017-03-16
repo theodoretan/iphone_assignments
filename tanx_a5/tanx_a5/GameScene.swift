@@ -6,17 +6,31 @@
 //  Copyright © 2017 Theodore Tan. All rights reserved.
 //
 
+
+// menu
+// explosion on collision
+// end game on 0 lives
+// music
+// labels for lives/score
+
+
 import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    private let INVADER_SPAWN_RATE = 1 // The higher the number means more invaders are spawn
+    private let INVADER_SPEED = 5.0 // the larger number means higher speed
+    private let KILLED_TO_WIN = 3; // The number of invaders that must be killed to win
+    private var lives = 3 // the number of lives the player has
+    
     private var createdContent = false;
     
     private var player = SKSpriteNode(imageNamed: "Spaceship");
     private var fire = SKSpriteNode(imageNamed: "fire");
-    private var enemies = [SKSpriteNode]();
-    private var bullets = [SKSpriteNode]();
+    private var leftarrow = SKSpriteNode(imageNamed: "leftarrow");
+    private var rightarrow = SKSpriteNode(imageNamed: "rightarrow");
+    
     private var contactQueue = [SKPhysicsContact]()
     private let scale:CGFloat = 0.5;
     private var timeLastCreate = 0.0;
@@ -69,6 +83,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func createBar() {
         fire.position = CGPoint(x: self.frame.midX, y: -(self.size.height/2.2));
         self.addChild(fire);
+        
+        leftarrow.position = CGPoint(x: self.frame.midX - self.frame.width/4, y: -(self.size.height/2.2));
+        rightarrow.position = CGPoint(x: self.frame.midX + self.frame.width/4, y: -(self.size.height/2.2));
+        
+        self.addChild(leftarrow);
+        self.addChild(rightarrow);
+
     }
     
     func createEnemy(forUpdate currentTime: CFTimeInterval) {
@@ -92,10 +113,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         invader.position = CGPoint(x: CGFloat(xValue), y: self.size.height/2);
         
+        let removeHealth = SKAction.run {
+            self.lives -= 1;
+            print(self.lives);
+        }
+        
         let invaderAction = SKAction.sequence([
             SKAction.moveTo(y: -self.size.height/2, duration: 3.0),
             SKAction.wait(forDuration: 3.0 / 60.0),
-            SKAction.removeFromParent()
+            SKAction.removeFromParent(),
+            removeHealth
             ]);
         
         invader.run(invaderAction);
@@ -121,30 +148,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
-    }
-    
     func pewpew() {
         let bullet = SKSpriteNode(imageNamed: "bullet");
         bullet.setScale(scale);
@@ -167,8 +170,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         bullet.run(bulletAction);
         
-        bullets.append(bullet);
-        
 //        let action = SKAction.moveTo(y: self.size.height, duration: 1.5);
 //        bullet.run(action);
         
@@ -183,15 +184,37 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let fw = fire.size.width/2;
             let fh = fire.size.height/2;
             
+            let raw = rightarrow.size.width/2;
+            let rah = rightarrow.size.height/2;
+
+            let law = leftarrow.size.width/2;
+            let lah = leftarrow.size.height/2;
+            
             if ((location.y > fire.position.y - fh && location.y < fire.position.y + fh) &&
                 location.x > fire.position.x - fw && location.x < fire.position.x + fw){
                 print("pewpew");
                 
                 pewpew();
-                
-                
             }
-            self.touchDown(atPoint: t.location(in: self))
+            
+            else if (location.y > rightarrow.position.y - rah && location.y < rightarrow.position.y + rah && location.x > rightarrow.position.x - raw && location.x < rightarrow.position.x + raw) {
+                moveShip(direction: "right", location: location);
+            } else if (location.y > leftarrow.position.y - lah && location.y < leftarrow.position.y + lah && location.x > leftarrow.position.x - law && location.x < leftarrow.position.x + law) {
+                moveShip(direction: "left", location: location);
+            }
+        }
+    }
+    
+    func moveShip(direction: String, location: CGPoint) {
+        let pw = player.size.width/2;
+        if (direction == "right") {
+            if (location.x < self.frame.width/2 - pw && location.x > -self.frame.width/2 + pw) {
+                player.position.x += 30 ;
+            }
+        } else {
+            if (location.x < self.frame.width/2 - pw && location.x > -self.frame.width/2 + pw) {
+                player.position.x -= 30;
+            }
         }
     }
     
@@ -208,17 +231,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 // make sure the entire spaceship is always on screen
                 player.position.x = location.x;
             }
-            
-            self.touchMoved(toPoint: t.location(in: self))
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+        
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+        
     }
     
     func processContacts(forUpdate currentTime: CFTimeInterval) {
@@ -244,16 +265,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let nodeNames = [contact.bodyA.node!.name!, contact.bodyB.node!.name!];
         
         if (nodeNames.contains(playerName) && nodeNames.contains(enemyName)) {
-            print("ded");
+//            contact.bodyA.node!.removeFromParent();
+//            contact.bodyB.node!.removeFromParent();
         } else if (nodeNames.contains(enemyName) && nodeNames.contains(bulletName)) {
             contact.bodyA.node!.removeFromParent();
             contact.bodyB.node!.removeFromParent();
+        } else if (nodeNames.contains(enemyName) && nodeNames.contains("screen")) {
+            print("rip");
         }
     }
     
     override func update(_ currentTime: TimeInterval) {
         createEnemy(forUpdate: currentTime);
         processContacts(forUpdate: currentTime);
+        
+        // check if ufo reached bottom of screen
     }
     
 }
