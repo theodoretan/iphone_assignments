@@ -19,6 +19,12 @@
 		ACCC536F1E79F79300191660 /* tanx_a5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC536E1E79F79300191660 /* tanx_a5UITests.swift */; };
 		ACCC537D1E7A13CB00191660 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC537C1E7A13CB00191660 /* MenuScene.swift */; };
 		ACCC537F1E7A323100191660 /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC537E1E7A323100191660 /* PhysicsCategory.swift */; };
+		ACCC53831E804B0400191660 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53821E804B0400191660 /* GameOverScene.swift */; };
+		ACCC53851E804B2200191660 /* WinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53841E804B2200191660 /* WinScene.swift */; };
+		ACCC53871E806A3A00191660 /* InstructionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53861E806A3A00191660 /* InstructionScene.swift */; };
+		ACCC53891E80777F00191660 /* Sound Effects in Resources */ = {isa = PBXBuildFile; fileRef = ACCC53881E80777F00191660 /* Sound Effects */; };
+		ACCC538B1E80811F00191660 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC538A1E80811F00191660 /* MusicPlayer.swift */; };
+		ACCC538D1E808A5B00191660 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC538C1E808A5B00191660 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		ACCC53701E79F79300191660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACCC537C1E7A13CB00191660 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		ACCC537E1E7A323100191660 /* PhysicsCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
+		ACCC53821E804B0400191660 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		ACCC53841E804B2200191660 /* WinScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinScene.swift; sourceTree = "<group>"; };
+		ACCC53861E806A3A00191660 /* InstructionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionScene.swift; sourceTree = "<group>"; };
+		ACCC53881E80777F00191660 /* Sound Effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Sound Effects"; sourceTree = "<group>"; };
+		ACCC538A1E80811F00191660 /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		ACCC538C1E808A5B00191660 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,7 @@
 		ACCC53471E79F79300191660 /* tanx_a5 */ = {
 			isa = PBXGroup;
 			children = (
+				ACCC53881E80777F00191660 /* Sound Effects */,
 				ACCC53481E79F79300191660 /* AppDelegate.swift */,
 				ACCC534A1E79F79300191660 /* GameScene.sks */,
 				ACCC534C1E79F79300191660 /* Actions.sks */,
@@ -118,6 +131,11 @@
 				ACCC535A1E79F79300191660 /* Info.plist */,
 				ACCC537C1E7A13CB00191660 /* MenuScene.swift */,
 				ACCC537E1E7A323100191660 /* PhysicsCategory.swift */,
+				ACCC53821E804B0400191660 /* GameOverScene.swift */,
+				ACCC53841E804B2200191660 /* WinScene.swift */,
+				ACCC53861E806A3A00191660 /* InstructionScene.swift */,
+				ACCC538A1E80811F00191660 /* MusicPlayer.swift */,
+				ACCC538C1E808A5B00191660 /* Settings.swift */,
 			);
 			path = tanx_a5;
 			sourceTree = "<group>";
@@ -249,6 +267,7 @@
 			files = (
 				ACCC53541E79F79300191660 /* Main.storyboard in Resources */,
 				ACCC534B1E79F79300191660 /* GameScene.sks in Resources */,
+				ACCC53891E80777F00191660 /* Sound Effects in Resources */,
 				ACCC53561E79F79300191660 /* Assets.xcassets in Resources */,
 				ACCC53591E79F79300191660 /* LaunchScreen.storyboard in Resources */,
 				ACCC534D1E79F79300191660 /* Actions.sks in Resources */,
@@ -277,8 +296,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCC534F1E79F79300191660 /* GameScene.swift in Sources */,
+				ACCC53871E806A3A00191660 /* InstructionScene.swift in Sources */,
+				ACCC538B1E80811F00191660 /* MusicPlayer.swift in Sources */,
+				ACCC53831E804B0400191660 /* GameOverScene.swift in Sources */,
+				ACCC538D1E808A5B00191660 /* Settings.swift in Sources */,
 				ACCC537D1E7A13CB00191660 /* MenuScene.swift in Sources */,
 				ACCC537F1E7A323100191660 /* PhysicsCategory.swift in Sources */,
+				ACCC53851E804B2200191660 /* WinScene.swift in Sources */,
 				ACCC53511E79F79300191660 /* GameViewController.swift in Sources */,
 				ACCC53491E79F79300191660 /* AppDelegate.swift in Sources */,
 			);
